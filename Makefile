@@ -26,6 +26,7 @@ dracut-nmbl-$(VERSION).tar.xz : Makefile
 		99grub2-emu-switchroot/ \
 		etc/ \
 		Makefile \
+		utils.mk \
 	| xz > $@
 
 tarball : dracut-nmbl-$(VERSION).tar.xz
