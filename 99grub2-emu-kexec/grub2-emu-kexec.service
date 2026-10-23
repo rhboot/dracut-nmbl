@@ -9,6 +9,6 @@ Conflicts=shutdown.target emergency.target
 
 [Service]
 ExecStart=-/bin/grub2-emu --kexec
-ExecStop=-/sbin/reboot
+ExecStop=/bin/sh -c 'grep -q 1 /sys/kernel/kexec_loaded || /sbin/reboot'
 StandardInput=tty
 StandardOutput=tty

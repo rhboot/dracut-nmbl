@@ -33,4 +33,5 @@ install() {
         ; do
         ln_r "${systemdsystemunitdir}/${i}" "${systemdsystemunitdir}/grub2-emu-switchroot.target.wants/${i}"
     done
+        ln_r "${systemdsystemunitdir}/grub2-emu-switchroot.service" "${systemdsystemunitdir}/initrd-switch-root.service"
 }
